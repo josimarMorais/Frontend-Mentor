@@ -44,6 +44,11 @@ body {
     font-weight: bolder;
 }
 
+#container button:hover {
+    background-color: hsl(50, 90%, 70%);
+    cursor: pointer;
+}
+
 #container span {
     margin-top: 1em;
     font-size: 0.9em;
@@ -52,6 +57,11 @@ body {
 
 #container h2 {
     margin-top: 0.7em;
+}
+
+#container h2:hover {
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
 }
 
 #container p {
