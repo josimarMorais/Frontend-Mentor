@@ -25,6 +25,8 @@ body {
 
 #container {
     width: 45vw;
+    min-width: 700px;
+    min-height: 600px;
     height: 60vh;
     padding: 2em;
     display: flex;
@@ -34,14 +36,80 @@ body {
 }
 
 #container-body {
-    width: 60%;
-    padding: 2em 4em 2em 2em;
+    width: 55%;
     display: flex;
     flex-direction: column;
+    padding: 2em 4em 2em 2em;
+    color: hsl(234, 29%, 20%);
+}
+
+
+#container-body h1 {
+    font-size: 3em;
+}
+
+#container-body p {
+    margin: 1.5em 0em;
+}
+
+#container-body .check {
+    display: flex;
+    margin-top: 0.9em;
+    align-items: center;
+}
+
+#container-body .check img {
+    width: 1.2em;
+    margin-right: 1em;
+}
+
+#container-body form {
+    display: flex;
+    margin-top: 2.5em;
+    flex-direction: column;
+
+}
+
+#container-body form label {
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+#container-body form input {
+    padding: 1em;
+    margin-top: 0.5em;
+    border-radius: 0.5em;
+    border: 0.1em solid hsla(234, 29%, 20%, 0.2);
+}
+
+#container-body form input:focus{
+    outline: none;
+    cursor: pointer;
+    border: 1px solid hsla(234, 29%, 20%, 0.8);
+}
+
+#container-body form button {
+    border: none;
+    padding: 1em;
+    margin-top: 1.5em;
+    border-radius: 0.5em;
+    background-color: hsl(234, 29%, 20%);
+}
+
+#container-body form button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(255, 82, 123) , rgb(254, 104, 61));
+}
+
+#container-body form button a {
+    font-size: 1em;
+    font-weight: 800;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
 }
 
 #img {
-    width: 40%;
+    width: 45%;
     border-radius: 1em;
     background-size: cover;
     background-repeat: no-repeat;
