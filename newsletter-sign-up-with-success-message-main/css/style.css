@@ -1,46 +1,69 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html, body {
     height: 100vh;
 }
+
 
 body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: hsl(234, 29%, 20%);
     font-family: 'Roboto', sans-serif;
-    
-    background-color: hsl(4, 100%, 67%);
-    background-color: hsl(231, 7%, 60%);
-    background-color: hsl(0, 0%, 100%);
-    background-color: hsl(234, 29%, 20%);
     background-color: hsl(235, 18%, 26%);
 }
 
+
+p {
+    margin: 1.5em 0em;
+}
+
+
+button {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    font-weight: 700;
+    margin-top: 1.5em;
+    border-radius: 0.5em;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(234, 29%, 20%);
+}
+
+
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(255, 82, 123) , rgb(254, 104, 61));
+}
+
+
 #container {
     width: 45vw;
-    min-width: 700px;
-    min-height: 600px;
     height: 60vh;
     padding: 2em;
     display: flex;
+    min-width: 576px;
+    min-height: 650px;
     border-radius: 2em;
     justify-content: space-between;
     background-color: hsl(0, 0%, 100%);
 }
 
+
 #container-body {
     width: 55%;
     display: flex;
     flex-direction: column;
-    padding: 2em 4em 2em 2em;
-    color: hsl(234, 29%, 20%);
+    padding: 2em 3.5em 2em 2em;
 }
 
 
@@ -48,9 +71,6 @@ body {
     font-size: 3em;
 }
 
-#container-body p {
-    margin: 1.5em 0em;
-}
 
 #container-body .check {
     display: flex;
@@ -58,10 +78,12 @@ body {
     align-items: center;
 }
 
+
 #container-body .check img {
     width: 1.2em;
     margin-right: 1em;
 }
+
 
 #container-body form {
     display: flex;
@@ -70,10 +92,12 @@ body {
 
 }
 
+
 #container-body form label {
     font-size: 0.8em;
     font-weight: 700;
 }
+
 
 #container-body form input {
     padding: 1em;
@@ -82,31 +106,38 @@ body {
     border: 0.1em solid hsla(234, 29%, 20%, 0.2);
 }
 
+
 #container-body form input:focus{
     outline: none;
     cursor: pointer;
     border: 1px solid hsla(234, 29%, 20%, 0.8);
 }
 
-#container-body form button {
-    border: none;
-    padding: 1em;
-    margin-top: 1.5em;
-    border-radius: 0.5em;
-    background-color: hsl(234, 29%, 20%);
+
+#container-body form #validator {
+    display: flex;
 }
 
-#container-body form button:hover {
-    cursor: pointer;
-    background-image: linear-gradient(to right, rgb(255, 82, 123) , rgb(254, 104, 61));
+
+#container-body form #validator label {
+    width: 64%;
+    align-self: start;
 }
 
-#container-body form button a {
-    font-size: 1em;
+
+#container-body form #validator #textEmail {
+    color: hsl(4, 100%, 67%);
     font-weight: 800;
-    text-decoration: none;
-    color: hsl(0, 0%, 100%);
 }
+
+
+#container-body form .error {
+    font-weight: 600;
+    color: hsl(4, 100%, 67%);
+    border: 1px solid hsl(4, 100%, 67%);
+    background-color: hsla(4, 100%, 67%, 0.5);
+}
+
 
 #img {
     width: 45%;
@@ -115,3 +146,145 @@ body {
     background-repeat: no-repeat;
     background-image: url('../assets/images/illustration-sign-up-desktop.svg');
 }
+
+
+/* SUCESS.HTML STYLE */
+#container-success {
+    width: 24vw;
+    height: 55vh;
+    padding: 3em;
+    display: flex;
+    min-width: 350px;
+    min-height: 668px;
+    border-radius: 2em;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#container-success .check {
+    align-self: start;
+}
+
+#container-success .check img {
+    width: 3em;
+}
+
+#container-success h1 {
+    font-size: 3em;
+    margin-top: 0.5em;
+}
+
+
+/* MOBILE STYLE */
+@media(max-width: 575px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        align-items: start;
+        justify-content: start;
+    }
+
+
+    #container {
+        margin: 0em;
+        padding: 0em;
+        width: 100vw;
+        height: 100vh;
+        min-width: 300px;
+        border-radius: 0em;
+        justify-self: start;
+        align-items: start;
+        flex-direction: column-reverse;
+    }
+
+
+    #container-body {
+        margin: 0em;
+        padding: 1.7em;
+        width: 100vw;
+        height: 60vh;
+    }
+
+
+    #container-body h1 {
+        margin-top: 0.2em;
+        font-size: 2.2em;
+    }
+
+
+    #container-body p {
+        margin: 0.4em 0em;
+        font-size: 0.95em;
+    }
+
+
+    #container-body .check {
+        margin: 0.4em 0em;
+        font-size: 0.95em;
+    }
+
+
+    #container-body form {
+        margin-top: 0.6em;
+    }
+
+
+    #container-body form input {
+        margin-top: 0.3em;
+    }
+
+
+    #container-body form input {
+        margin-top: 0.3em;
+    }
+
+    #container-body form button {
+        margin-top: 1.2em;
+    }
+
+    #img {
+        margin: 0em;
+        height: 40vh;
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 0em 0em 1em 1em;
+        background-image: url('/newsletter-sign-up-with-success-message-main/assets/images/illustration-sign-up-mobile.svg');
+    }
+
+
+    /* MOBILE SUCCESS.HTML STYLE*/
+
+    #container-success {
+        width: 100vw;
+        height: 100vh;
+        padding: 2em;
+        border-radius: 0em;
+        background-color: hsl(0, 0%, 100%);
+    }
+
+
+   #container-success .check {
+        margin-top: 13vh;
+    }
+
+
+    #container-success h1 {
+        margin-top: 5vh;
+        font-size: 2.5em;
+    }
+
+
+    #container-success p {
+        line-height: 1.5em;
+    }
+
+
+    #container-success button {
+        margin-top: 22vh;
+    }
+}
+    

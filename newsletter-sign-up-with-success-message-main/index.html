@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
@@ -24,23 +23,25 @@
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
 
       <div class="check">
-        <img src="/assets/images/icon-success.svg" alt="success">
+        <img src="../newsletter-sign-up-with-success-message-main/assets/images/icon-success.svg" alt="success">
         Product discovery and building what matters
       </div>
       <div class="check">
-        <img src="/assets/images/icon-success.svg" alt="success">
+        <img src="../newsletter-sign-up-with-success-message-main/assets/images/icon-success.svg" alt="success">
         Measuring to ensure updates are a success
       </div>
       <div class="check">
-        <img src="/assets/images/icon-success.svg" alt="success">
+        <img src="../newsletter-sign-up-with-success-message-main/assets/images/icon-success.svg" alt="success">
         And much more!
       </div>
 
       <form>
-        <label for="email">Email address</label>
-        <input type="email" name="email" id="email" placeholder="email@company.com">
-
-        <button type="submit" id="button"><a href="teste.html">Subscribe to monthly newsletter</a></button>
+        <div id="validator">
+            <label for="email">Email address</label>
+            <small id="textEmail"></small>
+        </div>
+        <input type="text" name="email" id="email" placeholder="email@company.com">
+        <button type="submit" id="button"> Subscribe to monthly newsletter </button>
       </form>
 
     </div>
@@ -48,18 +49,7 @@
 
     </div>
   </div>
-  <!-- Sign-up form end -->
-
-  <!-- Success message start 
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com.
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  Success message end -->
+ 
 
 
 </body>
