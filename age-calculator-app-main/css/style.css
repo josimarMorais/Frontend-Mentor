@@ -31,9 +31,11 @@ body {
 
 
 #container {
-    width: 60vw;
-    height: 50vh;
-    padding: 3em;
+    width: 38vw;
+    min-width: 556px;
+    height: 70vh;
+    min-height: 570px;
+    padding: 2.5em;
     display: flex;
     flex-direction: column;
     border-radius: 1em 1em 8em 1em;
@@ -43,19 +45,173 @@ body {
 
 #input form {
     display: flex;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.2em;
+    color: hsla(0, 1%, 44%, 0.7);
 }
 
 
 #input form .inputStyle{
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-direction: column;
-    margin: 1em 1em 1em 0em;
-    color: hsl(0, 1%, 44%);
+    margin: 1em 1.2em 1em 0em;
+}
+
+
+#input form .inputStyle label {
+    margin-left: 0.3em;
+    font-size: 0.6em;
 }
 
 
 #input form .inputStyle input {
-    height: 5vh;
-    font-size: 2em;
+    height: 6vh;
+    font-size: 1.4em;
+    margin-top: 0.15em;
+    padding: 0.8em 0em 0.8em 0.5em;
+    border-radius: 0.2em;
+    border: 1px solid hsla(0, 1%, 44%, 0.5);
+}
+
+
+#input form .inputStyle input::placeholder {
+    font-weight: 400i;
+    color: hsla(0, 1%, 44%, 0.7);
+}
+
+
+#input form .inputStyle input:focus {
+    outline-color: hsl(259, 100%, 65%);
+}
+
+
+#parting {
+    display: flex;
+    align-items: center;
+}
+
+
+hr {
+    width: 90%;
+    border: 0.1vh solid hsl(0, 1%, 44%, 0.1)
+}
+
+
+#parting img {
+    padding: 0.8em;
+    border-radius: 3em;
+    transition: ease-in-out 0.4s;
+    background-color: hsl(259, 100%, 65%);
+}
+
+#input form .inputStyle input:hover,
+#parting img:hover {
+    cursor: pointer;
+}
+
+#parting img:hover {
+   background-color: hsl(0, 0%, 8%);
+}
+
+#parting img:active {
+    cursor: grabbing;
+ }
+
+#result {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#result .resultStyle {
+    font-weight: 800;
+    font-size: 5em;
+    font-style: italic;
+}
+
+#result .resultStyle strong {
+    letter-spacing: 0.17em;
+    color: hsl(259, 100%, 65%);
+}
+
+
+/* Styles added through JavaScript */
+.error {
+    margin-top: 0.5em;
+    font-size: 0.75em;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    color: hsl(0, 100%, 67%);
+}
+
+/* Mobile Style */
+@media(max-width: 556px) and (min-width: 376px){
+
+    #container {
+        padding-left: 2em;
+        min-width: 95vw;
+        min-height: 600px;
+        border-radius: 1em 1em 5em 1em;
+    }
+
+    #input form .inputStyle {
+        width: 29%;
+    }
+
+    #parting {
+        position: relative;
+        margin: 3em 0em;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    #parting img {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    #result .resultStyle {
+        font-size: 4.5em;
+    }
+
+}
+
+@media(max-width: 375px){
+
+    #container {
+        padding-left: 2em;
+        min-width: 95vw;
+        min-height: 600px;
+        border-radius: 1em 1em 5em 1em;
+    }
+
+    #input form .inputStyle {
+        width: 29%;
+    }
+
+    #parting {
+        position: relative;
+        margin: 3em 0em;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    #parting img {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    #result .resultStyle {
+        font-size: 3.3em;
+    }
+
 }

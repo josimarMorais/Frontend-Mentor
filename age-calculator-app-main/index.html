@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
- 
+
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
@@ -18,28 +18,38 @@
     <div id="input">
       <form action="">
         <div class="inputStyle">
-          <label for="day">Day</label>
-          <input type="number" id="day" name="day" placeholder="DD">
+          <label for="day" id="labelDay">DAY</label>
+          <input type="number" id="day" name="day" min="1" max="31" placeholder="DD">
+          <span id="spanDay"></span>
         </div>
         <div class="inputStyle">
-          <label for="month">Month</label>
-          <input type="number" id="month" name="month" placeholder="MM">
+          <label for="month" id="labelMonth">MONTH</label>
+          <input type="number" id="month" name="month" min="1" max="12" placeholder="MM">
+          <span id="spanMonth"></span>
         </div>
         <div class="inputStyle">
-          <label for="year">Year</label>
-          <input type="number" id="year" name="year" placeholder="YYYY">
+          <label for="year" id="labelYear">YEAR</label>
+          <input type="number" id="year" name="year" min="1" max="20100" placeholder="YYYY">
+          <span id="spanYear"></span>
         </div>
       </form>
     </div>
     <div id="parting">
       <hr>
-      <img src="../age-calculator-app-main/assets/images/icon-arrow.svg" alt="Botão para buscar">
+      <img src="../age-calculator-app-main/assets/images/icon-arrow.svg" alt="Botão para buscar" id="img1">
     </div>
     <div id="result">
-      <strong>--</strong><span>years</span>
-      <strong>--</strong><span>months</span>
-      <strong>--</strong><span>days</span>
+      <div class="resultStyle">
+        <strong id="strongYears">--</strong><span>years</span>
+      </div>
+      <div class="resultStyle">
+        <strong id="strongMonths">--</strong><span>months</span>
+      </div>
+      <div class="resultStyle">
+        <strong id="strongDays">--</strong><span>days</span>
+      </div>
     </div>
   </div>
 </body>
+
 </html>
