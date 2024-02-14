@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica, sans-serif;
+}
+
+body {
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+button {
+    border: none;
+    opacity: 0.75;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: .25rem;
+    padding: .6rem 1.2rem;
+    background-color: #888;
+    transition: ease-in-out 0.3s;
+}
+
+#open-modal {
+    background-color: #007bff;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#fade, #modal {
+    transition: ease-in-out 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.6);
+}
+
+#modal {
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 500px;
+    max-width: 85%;
+    padding: 1.2rem;
+    position: fixed;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccccc6b;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide {
+    left: 0;
+}
